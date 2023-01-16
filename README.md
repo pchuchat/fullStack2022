@@ -5,4 +5,4 @@ Full Stack open
 
 Yritän kehitää osaamista websovelluskehityksessa.
 
-https://fullstackopen.com/
+ohjeet: https://fullstackopen.com/
