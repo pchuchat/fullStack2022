@@ -8,6 +8,6 @@ Yritän kehitää osaamista websovelluskehityksessa.
 ohjeet: https://fullstackopen.com/
 
 Osio 2
-
+maidentiedot osiossa.
 Pitää tehdät oma .env tiedosto juuri kanssion ja sijoittaa oma API KEY, niin sovellus toimii.
 API KEY saadaan:https://openweathermap.org/
