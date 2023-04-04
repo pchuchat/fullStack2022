@@ -1,12 +1,13 @@
 
-const { response, request } = require('express')
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
-
-morgan.token('body', (request,response) => request.method === 'POST' ? JSON.stringify(request.body): ' ')
+app.use(cors())
+app.use(express.static('build'))
+morgan.token('body', (request,_response) => request.method === 'POST' ? JSON.stringify(request.body): ' ')
 app.use(
     morgan(( tokens, request ,response) =>[
     tokens.method(request,response),
@@ -46,7 +47,7 @@ let persons = [
 
 const generateId = () => Math.floor((Math.random()*1000000)+1)
 
-app.get('/api/persons',(request,response) =>{
+app.get('/api/persons',(_request,response) =>{
     response.json(persons)
   })
 

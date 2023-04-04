@@ -6,12 +6,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../puh-frond/ && npm run build && cp -r build ../puhelinluettelo",
+    "deploy": "flyctl deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",    
+    "logs:prod": "flyctl logs"
   },
   "keywords": [],
   "author": "Kaitsu",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   },
