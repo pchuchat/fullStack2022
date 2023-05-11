@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf build && cd ../puh-frond/ && npm run build && cp -r build ../puhelinluettelo",
     "deploy": "flyctl deploy",
-    "deploy:full": "npm run build:ui && npm run deploy",    
+    "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "flyctl logs"
   },
   "keywords": [],
@@ -18,6 +18,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mongo": "^0.1.0",
+    "mongodb": "^5.4.0",
+    "mongoose": "^7.1.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
